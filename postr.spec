@@ -1,12 +1,11 @@
 Summary:	Postr is a Flickr uploading tool for the GNOME desktop
 Name:		postr
-Version:	0.12.3
+Version:	0.12.4
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphics
 Url:		http://burtonini.com/blog/computers/postr
-Source0:	http://burtonini.com/computing/%{name}-%{version}.tar.gz
-Patch0:		fix_upload_button.patch
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 %py_requires -d
 Requires:	pygtk2.0
 Requires:       python-twisted-core
@@ -21,7 +20,6 @@ be simple to use but exposing enough of Flickr to be useful.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 python setup.py build
