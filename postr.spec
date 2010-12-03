@@ -6,7 +6,7 @@ License:	GPLv2+
 Group:		Graphics
 Url:		http://projects.gnome.org/postr/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
-%py_requires -d
+BuildRequires:	python-devel
 Requires:	pygtk2.0
 Requires:       python-twisted-core
 Requires:       python-twisted-web
