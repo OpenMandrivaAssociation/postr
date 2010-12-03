@@ -4,7 +4,7 @@ Version:	0.12.4
 Release:	%mkrel 2
 License:	GPLv2+
 Group:		Graphics
-Url:		http://burtonini.com/blog/computers/postr
+Url:		http://projects.gnome.org/postr/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 %py_requires -d
 Requires:	pygtk2.0
