@@ -1,7 +1,7 @@
 Summary:	Postr is a Flickr uploading tool for the GNOME desktop
 Name:		postr
 Version:	0.12.4
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPLv2+
 Group:		Graphics
 Url:		http://projects.gnome.org/postr/
