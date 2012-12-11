@@ -54,3 +54,33 @@ mv %buildroot%_prefix/lib/nautilus %buildroot%_libdir
 %{_datadir}/applications/*
 %{py_puresitedir}/%{name}/*
 %{py_puresitedir}/*.egg-info
+
+
+%changelog
+* Mon Oct 31 2011 Götz Waschk <waschk@mandriva.org> 0.12.4-3mdv2012.0
++ Revision: 707977
+- rebuild
+- update build deps
+- update URL
+
+* Sat Oct 30 2010 Götz Waschk <waschk@mandriva.org> 0.12.4-2mdv2011.0
++ Revision: 590552
+- rebuild for new python
+
+* Fri Nov 06 2009 Götz Waschk <waschk@mandriva.org> 0.12.4-1mdv2010.1
++ Revision: 460726
+- new version
+- drop patch
+
+* Tue Aug 25 2009 Götz Waschk <waschk@mandriva.org> 0.12.3-1mdv2010.0
++ Revision: 420833
+- fix summary
+- fix upload button
+- fix installation on 64 bit
+- fix license
+- add missing deps
+
+  + Eugeni Dodonov <eugeni@mandriva.com>
+    - 0.12.3
+    - Created package structure for postr.
+
