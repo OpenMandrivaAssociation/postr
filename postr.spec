@@ -1,7 +1,7 @@
 Summary:	Flickr uploading tool for the GNOME desktop
 Name:		postr
 Version:	0.12.4
-Release:	%mkrel 3
+Release:	4
 License:	GPLv2+
 Group:		Graphics
 Url:		http://projects.gnome.org/postr/
@@ -12,7 +12,6 @@ Requires:       python-twisted-core
 Requires:       python-twisted-web
 Requires:       nautilus-python
 Requires:	gnome-python-gconf
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Postr is a Flickr uploading tool for the GNOME desktop, which aims to
@@ -46,7 +45,6 @@ mv %buildroot%_prefix/lib/nautilus %buildroot%_libdir
 %endif
 
 %files
-%defattr(-,root,root)
 %doc README AUTHORS COPYING TODO
 %{_bindir}/postr
 %{_libdir}/nautilus/extensions*/python/%{name}*
