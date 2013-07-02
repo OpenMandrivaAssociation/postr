@@ -1,3 +1,5 @@
+%define debug_package %{nil}
+
 Summary:	Flickr uploading tool for the GNOME desktop
 Name:		postr
 Version:	0.12.4
