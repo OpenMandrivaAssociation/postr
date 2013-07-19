@@ -2,12 +2,12 @@
 
 Summary:	Flickr uploading tool for the GNOME desktop
 Name:		postr
-Version:	0.12.4
-Release:	4
+Version:	0.13
+Release:	1
 License:	GPLv2+
 Group:		Graphics
 Url:		http://projects.gnome.org/postr/
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/postr/0.13/%{name}-%{version}.tar.xz
 BuildRequires:	python-devel
 Requires:	pygtk2.0
 Requires:       python-twisted-core
@@ -83,4 +83,5 @@ mv %buildroot%_prefix/lib/nautilus %buildroot%_libdir
   + Eugeni Dodonov <eugeni@mandriva.com>
     - 0.12.3
     - Created package structure for postr.
+
 

@@ -1,2 +1,4 @@
+removed_sources:
+  postr-0.12.4.tar.bz2: 7dd5e3fa2b7c85ccf215089df85c8afaab7483cb
 sources:
-  "postr-0.12.4.tar.bz2": 7dd5e3fa2b7c85ccf215089df85c8afaab7483cb
+  postr-0.13.tar.xz: b3039e756b348960d5feb89f5c8fa625df643f30
