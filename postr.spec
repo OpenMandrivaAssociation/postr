@@ -1,18 +1,23 @@
 %define debug_package %{nil}
+%define url_ver	%(echo %{version}|cut -d. -f1,2)
 
-Summary:	Flickr uploading tool for the GNOME desktop
+Summary:	Postr is a Flickr uploading tool for the GNOME desktop
 Name:		postr
-Version:	0.12.4
-Release:	4
+Version:	0.13.1
+Release:	3
 License:	GPLv2+
 Group:		Graphics
 Url:		http://projects.gnome.org/postr/
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
-BuildRequires:	python-devel
+Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+BuildRequires:	pkgconfig(nautilus-python) >= 0.6.1
+BuildRequires:	pkgconfig(pygtk-2.0)
+BuildRequires:	intltool
+BuildRequires:	gnome-doc-utils
+BuildRequires:	pkgconfig(gnome-doc-utils)
 Requires:	pygtk2.0
-Requires:       python-twisted-core
-Requires:       python-twisted-web
-Requires:       nautilus-python
+Requires:	python-twisted-core
+Requires:	python-twisted-web
+Requires:	nautilus-python
 Requires:	gnome-python-gconf
 
 %description
@@ -23,22 +28,20 @@ be simple to use but exposing enough of Flickr to be useful.
 %setup -q
 
 %build
-python setup.py build
+%configure2_5x --with-nautilus-extension-dir=%{_datadir}/nautilus-python/extensions
+%make
 
 %install
-python setup.py install --root=%{buildroot}
+%makeinstall_std
 
-#gw the extensions must be in the arch-dependant dir:
-%if %_lib != lib
-mkdir -p %{buildroot}%{_libdir}
-mv %{buildroot}%{_prefix}/lib/nautilus %{buildroot}%{_libdir}
-%endif
+%find_lang %{name} --with-gnome
 
-%files
+%files -f %{name}.lang
 %doc README AUTHORS COPYING TODO
 %{_bindir}/postr
-%{_libdir}/nautilus/extensions*/python/%{name}*
 %{_iconsdir}/hicolor/*/apps/*
 %{_datadir}/applications/*
-%{py_puresitedir}/%{name}/*
-%{py_puresitedir}/*.egg-info
+%{_datadir}/nautilus-python/extensions/*
+%{py_puresitedir}/%{name}
+
+
