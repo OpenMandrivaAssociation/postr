@@ -7,7 +7,7 @@ Version:	0.13.1
 Release:	4
 License:	GPLv2+
 Group:		Graphics
-Url:		http://projects.gnome.org/postr/
+Url:		https://projects.gnome.org/postr/
 Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(nautilus-python) >= 0.6.1
 BuildRequires:	pkgconfig(pygtk-2.0)
