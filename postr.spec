@@ -9,6 +9,11 @@ License:	GPLv2+
 Group:		Graphics
 Url:		https://projects.gnome.org/postr/
 Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(nautilus-python) >= 0.6.1
 BuildRequires:	pkgconfig(pygtk-2.0)
 BuildRequires:	intltool
